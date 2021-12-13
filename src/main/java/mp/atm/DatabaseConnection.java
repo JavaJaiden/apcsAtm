@@ -23,6 +23,7 @@ public class DatabaseConnection {
 
         try {
             PreparedStatement query;
+            
             query = this.conn.prepareStatement("SELECT * FROM `atm` WHERE username=?");
             query.setString(1, username);
 
