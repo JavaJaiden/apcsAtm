@@ -23,6 +23,7 @@ public class DatabaseConnection {
 
         try {
             PreparedStatement query;
+            
             query = this.conn.prepareStatement("SELECT * FROM `atm` WHERE username=?");
             query.setString(1, username);
 
@@ -42,6 +43,7 @@ public class DatabaseConnection {
 
     @SuppressWarnings("SqlResolve")
     public Result<Boolean> Register(String username, String password) {
+        
         if (username.isEmpty() || password.isEmpty() || username.length() >= 50 || password.length() >= 50)
             return new Result<>("username or password can not be empty", false);
 
