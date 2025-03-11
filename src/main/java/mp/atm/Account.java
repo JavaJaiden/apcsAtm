@@ -7,8 +7,8 @@ import java.sql.PreparedStatement;
 
 public class Account {
     private float balance;
-    private final Connection conn;
     private final String username;
+    private final Connection conn;
 
     public Account(float balance, String username, Connection conn) {
         this.balance = balance;
